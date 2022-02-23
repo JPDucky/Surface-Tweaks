@@ -1,0 +1,20 @@
+#after-install setup script
+
+#aliases
+alias la="ls -a"
+alias ll="ls -l"
+alias lla="ls -la"
+
+#bash shell customizations
+export PS1="[\[$(tput sgr0)\]\[\033[38;5;196m\]\u\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;47m\]@\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;83m\]\w\[$(tput sgr0)\]]\[$(tput sgr0)\]"
+
+#kernel directory env variable
+export KERN_DIR=/usr/src/kernels/`uname -r`
+
+#firefox
+export MOZ_ENABLE_WAYLAND=1
+
+### put these lines in /etc/sudoers
+# User_Alias    YDOTOOL = palmerd
+# YDOTOOL    ALL = NOPASSWD: /usr/bin ydotool ydotoold
+# %wheel  ALL=(ALL)       NOPASSWD: ALL
